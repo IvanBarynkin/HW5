@@ -22,7 +22,7 @@ public class Main {
         if (clientOS == 1 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для Android по ссылке: ");
         } else if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите Облегченную версию приложения для  Android по ссылке: ");
+            System.out.println("Установите облегченную версию приложения для Android по ссылке: ");
         } else if (clientOS == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для  iOS по ссылке: ");
         } else {
@@ -34,7 +34,7 @@ public class Main {
 
         System.out.println("Введите год:");
         int year = in.nextInt();
-        if (year > 1584 && year % 4 == 0) {
+        if (year > 1584 && year % 4 == 0 && year % 400 == 0) {
             System.out.println("Год високосный.");
         } else {
             System.out.println("Год невисокосный.");
@@ -63,8 +63,8 @@ public class Main {
         System.out.println("_______Задание №5_______");
 
         System.out.println("Введите число месяца: ");
-        byte month = in.nextByte();
-        switch (month) {
+        byte monthNumber = in.nextByte();
+        switch (monthNumber) {
             case 1, 2, 12:
                 System.out.println("Зима");
                 break;
